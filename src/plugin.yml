@@ -1,0 +1,12 @@
+name: SnowBallBall v2
+main: com.sbb.Sbb
+author: MattyBainy
+version: 1.0
+description: >
+             SnowBallBall v2
+             
+commands:
+  start:
+    description: Starts the game
+  records:
+    description: Shows the player their records
