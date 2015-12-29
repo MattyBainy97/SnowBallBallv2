@@ -69,6 +69,8 @@ public class PlayerMove extends SBBListener {
             LocationUtilities.teleportToGame();
             
             ChatUtilities.broadcast(ChatColor.DARK_AQUA + m.getPlayer().getName() + ChatColor.GOLD + " SCORED FOR " + ChatColor.DARK_AQUA + "CYAN");
+            ChatUtilities.onePlayer(ChatColor.GREEN + "5 " + ChatColor.GOLD + "points for scoring", m.getPlayer());
+            
             int random = new Random().nextInt(SBBTeam.yellow.size());
             Player player = Bukkit.getPlayer(SBBTeam.yellow.get(random));
             player.getInventory().setHelmet(SBBItem.lhelm);
@@ -91,9 +93,10 @@ public class PlayerMove extends SBBListener {
             Database.closeConnection();
 
             LocationUtilities.teleportToGame();
-
-            m.getPlayer().getInventory().clear();
+            
             ChatUtilities.broadcast(ChatColor.YELLOW + m.getPlayer().getName() + ChatColor.GOLD + " SCORED FOR " + ChatColor.YELLOW + "YELLOW");
+            ChatUtilities.onePlayer(ChatColor.GREEN + "5 " + ChatColor.GOLD + "points for scoring", m.getPlayer());
+            
             int random = new Random().nextInt(SBBTeam.cyan.size());
             Player player = Bukkit.getPlayer(SBBTeam.cyan.get(random));
             player.getInventory().setHelmet(SBBItem.lhelm);

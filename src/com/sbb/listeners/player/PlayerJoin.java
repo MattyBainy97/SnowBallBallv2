@@ -69,8 +69,6 @@ public class PlayerJoin extends SBBListener {
         p.setExp(0);
         p.removePotionEffect(PotionEffectType.INVISIBILITY);
         p.setGameMode(GameMode.ADVENTURE);
-        p.getInventory().clear();
-        p.getInventory().setHelmet(null);
         Game.setCanStart(Bukkit.getOnlinePlayers().size() >= 2);
         
         if (SBBTeam.cyan.size() <= SBBTeam.yellow.size()) {
@@ -78,6 +76,7 @@ public class PlayerJoin extends SBBListener {
             PointSB.addCyan(p);
             SBBTeam.addCyan(p);
             p.getInventory().clear();
+            p.getInventory().setHelmet(null);
             p.getInventory().setChestplate(SBBItem.cylchest);
             
         } else {
@@ -85,6 +84,7 @@ public class PlayerJoin extends SBBListener {
             PointSB.addYellow(p);
             SBBTeam.addYellow(p);
             p.getInventory().clear();
+            p.getInventory().setHelmet(null);
             p.getInventory().setChestplate(SBBItem.yellchest);
             
         }

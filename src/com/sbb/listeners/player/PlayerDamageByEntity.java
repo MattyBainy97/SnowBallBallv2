@@ -50,6 +50,7 @@ public class PlayerDamageByEntity extends SBBListener {
                     Database.updateSbbTable(hitter, "steals", Database.getSbb(hitter, "steals") + 1);
                     Database.updateSbbTable(hitter, "points", Database.getSbb(hitter, "points") + 1);
                     Database.closeConnection();
+                    ChatUtilities.onePlayer(ChatColor.GREEN + "1 " + ChatColor.GOLD + "point for stealing the ball from " + gothit.getName(), hitter);
                 } else if (SBBTeam.isInCyan(hitter) && SBBTeam.isInCyan(gothit)) {
                     event.setCancelled(true);
                 } else if (SBBTeam.isInYellow(hitter) && SBBTeam.isInYellow(gothit)) {
@@ -66,6 +67,7 @@ public class PlayerDamageByEntity extends SBBListener {
                     Database.updateSbbTable(hitter, "steals", Database.getSbb(hitter, "steals") + 1);
                     Database.updateSbbTable(hitter, "points", Database.getSbb(hitter, "points") + 1);
                     Database.closeConnection();
+                    ChatUtilities.onePlayer(ChatColor.GREEN + "1 " + ChatColor.GOLD + "point for stealing the ball from " + gothit.getName(), hitter);
                 }
                 gothit.setHealth(20.0);
             }

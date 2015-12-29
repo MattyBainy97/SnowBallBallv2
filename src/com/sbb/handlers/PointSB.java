@@ -105,6 +105,18 @@ public class PointSB {
         
     }
     
+    public static int getCyanPoints(){
+        
+        return points.getScore(Bukkit.getOfflinePlayer(ChatColor.DARK_AQUA + "CYAN")).getScore();
+        
+    }
+    
+    public static int getYellowPoints(){
+        
+        return points.getScore(Bukkit.getOfflinePlayer(ChatColor.YELLOW + "YELLOW")).getScore();
+        
+    }
+    
     public static void unregisterTeams(){
         
         cy.unregister();
